@@ -20,7 +20,6 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <Nav />
-        <Main />
       </MuiThemeProvider>
     );
   }
