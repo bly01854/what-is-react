@@ -3,32 +3,13 @@ import {
   Grid,
   Typography,
   Divider,
-  Icon
+  Icon,
+  withStyles
 } from "../../node_modules/@material-ui/core";
-import { Npm } from 'mdi-material-ui'
+import { Npm } from "mdi-material-ui";
 import FadeInPaper from "./FadeInPaper";
-
-const Community = () => {
-  return (
-    <Grid container direction="row" justify="center" alignContent="center" alignItems="center">
-      <Grid item>
-        <Typography align="center" variant="display3" gutterBottom>
-          Awesome Community
-          <Divider />
-        </Typography>
-      </Grid>
-      <Grid item>
-        <Typography variant="subtitle1" md={10} align="center">
-          Anyone can create and publish their own components and component
-          libraries.
-        </Typography>
-        <Icon>
-
-        </Icon>
-      </Grid>
-    </Grid>
-  );
-};
+import SvgIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import Community from './Why/Community';
 
 class Why extends Component {
   render() {
