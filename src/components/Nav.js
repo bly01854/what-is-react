@@ -11,7 +11,8 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { ChevronLeft, Home, QuestionAnswer } from "@material-ui/icons";
+import { ChevronLeft, Home, QuestionAnswer, Code } from "@material-ui/icons";
+import { Puzzle } from "mdi-material-ui"
 import { Link } from "react-router-dom";
 
 import Main from "./Main";
@@ -20,6 +21,7 @@ import {
   ListItemIcon,
   ListItemText
 } from "../../node_modules/@material-ui/core";
+import ListSubheader from "@material-ui/core/ListSubheader/ListSubheader";
 
 const drawerWidth = 240;
 
@@ -179,6 +181,22 @@ class Nav extends React.Component {
                   <QuestionAnswer />
                 </ListItemIcon>
                 <ListItemText primary="Why React" />
+              </ListItem>
+              <Divider />
+              <ListSubheader inset>
+                Learn
+              </ListSubheader>
+              <ListItem button component={Link} to="/jsx">
+                <ListItemIcon>
+                  <Code />
+                </ListItemIcon>
+                <ListItemText primary="JSX" />
+              </ListItem>
+              <ListItem button component={Link} to="/components">
+                <ListItemIcon>
+                  <Puzzle />
+                </ListItemIcon>
+                <ListItemText primary="Components" />
               </ListItem>
           </List>
         </Drawer>

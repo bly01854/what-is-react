@@ -36,7 +36,7 @@ class Scale extends Component {
           <Typography
             color="textPrimary"
             align="center"
-            variant="display3"
+            variant="display2"
             gutterBottom
           >
             Immense Scalability

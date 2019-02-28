@@ -12,6 +12,7 @@ import SvgIcon from "@material-ui/core/SvgIcon/SvgIcon";
 import Community from "./Why/Community";
 import Scale from "./Why/Scale";
 import Preferred from "./Why/Preferred";
+import Simple from "./Why/Simple";
 
 class Why extends Component {
   render() {
@@ -24,14 +25,14 @@ class Why extends Component {
         direction="row"
       >
       <Grid item md={12}>
-        <Typography variant="display4" align="center" color="secondary">
+        <Typography variant="h2" align="center" color="secondary">
             Why React?
         </Typography>
       </Grid>
         <FadeInPaper component={<Community />} />
         <FadeInPaper component={<Scale />} />
         <FadeInPaper component={<Preferred />} />
-        <FadeInPaper component={<Preferred />} />
+        <FadeInPaper component={<Simple />} />
       </Grid>
     );
   }

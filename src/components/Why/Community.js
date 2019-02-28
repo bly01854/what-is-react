@@ -32,7 +32,7 @@ class Community extends Component {
           <Typography
             color="textPrimary"
             align="center"
-            variant="display3"
+            variant="h3"
             gutterBottom
           >
             Awesome Community
