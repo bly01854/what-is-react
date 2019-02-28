@@ -11,8 +11,22 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import { ChevronLeft, Home, QuestionAnswer, Code } from "@material-ui/icons";
-import { Puzzle } from "mdi-material-ui"
+import {
+  ChevronLeft,
+  Home,
+  QuestionAnswer,
+  Code,
+  Info
+} from "@material-ui/icons";
+import {
+  Puzzle,
+  CodeBraces,
+  GraveStone,
+  GestureTap,
+  ArrowRightBold,
+  GithubCircle
+} from "mdi-material-ui";
+import MLink from "@material-ui/core/Link";
 import { Link } from "react-router-dom";
 
 import Main from "./Main";
@@ -152,6 +166,13 @@ class Nav extends React.Component {
             >
               What Is React
             </Typography>
+            <MLink
+              href="https://github.com/bly01854/what-is-react"
+              target="_blank"
+              rel="noopener"
+            >
+              <GithubCircle style={{ color: "white" }} />
+            </MLink>
           </Toolbar>
         </AppBar>
         <Drawer
@@ -170,34 +191,65 @@ class Nav extends React.Component {
             </IconButton>
           </div>
           <List>
+            <ListSubheader inset>Introduction</ListSubheader>
             <ListItem button component={Link} to="/">
               <ListItemIcon>
                 <Home />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItem>
-              <ListItem button component={Link} to="/why">
-                <ListItemIcon>
-                  <QuestionAnswer />
-                </ListItemIcon>
-                <ListItemText primary="Why React" />
-              </ListItem>
-              <Divider />
-              <ListSubheader inset>
-                Learn
-              </ListSubheader>
-              <ListItem button component={Link} to="/jsx">
-                <ListItemIcon>
-                  <Code />
-                </ListItemIcon>
-                <ListItemText primary="JSX" />
-              </ListItem>
-              <ListItem button component={Link} to="/components">
-                <ListItemIcon>
-                  <Puzzle />
-                </ListItemIcon>
-                <ListItemText primary="Components" />
-              </ListItem>
+            <ListItem button component={Link} to="/why">
+              <ListItemIcon>
+                <QuestionAnswer />
+              </ListItemIcon>
+              <ListItemText primary="Why React" />
+            </ListItem>
+            <Divider />
+            <ListSubheader inset>Learn</ListSubheader>
+            <ListItem button component={Link} to="/jsx">
+              <ListItemIcon>
+                <Code />
+              </ListItemIcon>
+              <ListItemText primary="JSX" />
+            </ListItem>
+            <ListItem button component={Link} to="/components">
+              <ListItemIcon>
+                <Puzzle />
+              </ListItemIcon>
+              <ListItemText primary="Components" />
+            </ListItem>
+            <ListItem button component={Link} to="/state">
+              <ListItemIcon>
+                <CodeBraces />
+              </ListItemIcon>
+              <ListItemText primary="State" />
+            </ListItem>
+            <ListItem button component={Link} to="/lifecycle">
+              <ListItemIcon>
+                <GraveStone />
+              </ListItemIcon>
+              <ListItemText primary="Lifecycle" />
+            </ListItem>
+            <ListItem button component={Link} to="/events">
+              <ListItemIcon>
+                <GestureTap />
+              </ListItemIcon>
+              <ListItemText primary="Events" />
+            </ListItem>
+            <Divider />
+            <ListSubheader inset>Extras</ListSubheader>
+            <ListItem button component={Link} to="/next">
+              <ListItemIcon>
+                <ArrowRightBold />
+              </ListItemIcon>
+              <ListItemText primary="What's Next" />
+            </ListItem>
+            <ListItem button component={Link} to="/about">
+              <ListItemIcon>
+                <Info />
+              </ListItemIcon>
+              <ListItemText primary="About" />
+            </ListItem>
           </List>
         </Drawer>
         <main className={classes.content}>
