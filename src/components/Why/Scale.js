@@ -1,24 +1,28 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Grid, Typography, Divider, Link } from "@material-ui/core";
-import { Npm } from "mdi-material-ui";
+import { FacebookBox } from "mdi-material-ui";
 
 const styles = theme => ({
   icon: {
-    fontSize: theme.typography.display4.fontSize,
-    color: theme.palette.primary
+    fontSize: theme.typography.display3.fontSize,
   },
   text: {
     paddingLeft: theme.spacing.unit * 3,
     paddingRight: theme.spacing.unit * 3
+  },
+  component: {
+      marginTop: theme.spacing.unit * 5,
+      marginBottom: theme.spacing.unit * 5
   }
 });
 
-class Community extends Component {
+class Scale extends Component {
   constructor(props) {
     super(props);
   }
   render() {
+    const facebookComponents = "\t > 50,000 components"
     const { classes } = this.props;
     return (
       <Grid
@@ -35,36 +39,32 @@ class Community extends Component {
             variant="display3"
             gutterBottom
           >
-            Awesome Community
+            Immense Scalability
             <Divider />
           </Typography>
         </Grid>
         <Grid item>
           <Typography variant="subtitle1" md={10} align="center">
-            Anyone can create and publish their own components and component
-            libraries.
+            The modular nature of React allows for sustainable growth of an
+            application.
           </Typography>
-          <Grid item>
-            <Typography variant="subtitle1" align="center" 
-            className={classes.text}>
-              The React Community boasts about its millions of developers who
-              have contributed thousands of well-tested components - leading to
-              shorter development time.
+          <Grid container alignContent="center" alignItems="center"
+          className={classes.component}>
+          <span>&nbsp;&nbsp;&nbsp;</span>
+            <FacebookBox className={classes.icon} color="secondary" />
+            <Typography variant="display2">
+            <span>&nbsp;</span>{facebookComponents}
             </Typography>
           </Grid>
-          <Typography align="center">
-            <Link
-              href="https://www.npmjs.com/search?q=keywords:react"
-              target="_blank"
-              rel="noopener"
-            >
-              <Npm className={classes.icon} color="secondary" />
-            </Link>
+          <Grid item>
+          <Typography variant="subtitle1" align="center">
+            ... and still grows without any performance problems.
           </Typography>
+          </Grid>
         </Grid>
       </Grid>
     );
   }
 }
 
-export default withStyles(styles)(Community);
+export default withStyles(styles)(Scale);
